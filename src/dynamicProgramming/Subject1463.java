@@ -1,6 +1,8 @@
 package dynamicProgramming;
 
 import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Set;
 
 /**
  * 문제
@@ -65,9 +67,34 @@ public class Subject1463 {
          * */
         HashMap<String, Integer> resultMap = new HashMap<>();
 
+        // 최소값 벨리데이션 로직
+        // 1. 상황별로 맞는 케이스를 리턴한다.
         if(value % 3 == 0){
             resultMap.put("3", value/3);
-        }else if(value % 2 == 0){}
+        }else if(value % 2 == 0){
+            resultMap.put("2", value/2);
+        } else {
+            resultMap.put("1", value-1);
+        }
+
+        // 2. 최소값인 친구를 찾아보자.
+        int result = 0;
+        Iterator<String> iterator = resultMap.keySet().iterator();
+        while (iterator.hasNext()) {
+            String key = iterator.next();
+            int temp = resultMap.get(key);
+
+            //최초 초기화라는 뜻
+            if(result==0){
+                result = temp;
+            } else {
+                //본격적으로 벨리데이션을 해보자.
+
+
+
+            }
+
+        }
 
         return 0;
     }
