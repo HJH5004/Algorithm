@@ -68,7 +68,7 @@ public class Subject1463 {
         HashMap<String, Integer> resultMap = new HashMap<>();
 
         // 최소값 벨리데이션 로직
-        // 1. 상황별로 맞는 케이스가 아니라 모든 트리를 파봐야 할 것 같은데
+        // 1. 상황별로 맞는 케이스가 아니라 모든 트리를 파봐야 할 것 같은데 고도화
         if(value % 3 == 0){
             resultMap.put("3", value/3);
         }else if(value % 2 == 0){
